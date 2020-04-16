@@ -1,0 +1,54 @@
+\documentclass{scrreprt}
+
+% Spracheinstellungen
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Mathe\_Übungen\_Abgabe} % Wir können ja auch immer nur die Lösung exportieren.
+\author{Inf19 Gruppe B4}
+
+\begin{document}
+
+    \maketitle
+
+    % Beginn einer neuen Übung
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+    \section*{Lösung Übung 1}
+    \begin{enumerate}
+        \item[Aufgabe 1]
+        \begin{enumerate}
+            \item[a)]{
+                $\langle a_n \rangle = \langle \frac{10^6}{n}\rangle$\newline
+                $\lim \limits_{n \to \infty} a_n = \lim \limits_{n \to \infty} \frac{10^6}{n} = \lim \limits_{n \to \infty} (10^6 \cdot \frac{1}{n} ) = 10^6 \cdot \lim \limits_{n \to \infty} (\frac{1}{n}) = 10^6 \cdot 0 = \underline{0}$
+            }
+            \item[d)]{
+                $\langle a_n \rangle = \langle\cos(n\cdot\frac{\pi}{2})\rangle$\newline
+                Konvergiert die Folge?\newline
+                $\Rightarrow$ Nutzung Theorem: Eine Folge konvergiert genau dann, wenn sie beschränkt und monoton ist.\newline
+
+                Prüfung der Schranken (trivial für unmodulierten Cosinus):\newline
+                \textbullet $\sup a_n = 1$\newline
+                \textbullet $\inf a_n = 1$\newline
+
+                Prüfung der Monotonie:\newline
+                Fälle der Werte in der Folge:
+                \begin{itemize}
+                    \item{$n\mod 4 = 0 \rightarrow \cos(4k\cdot \frac{\pi}{2}) = 1 ; k\in \mathbb{N} $}
+                    \item{$n\mod 4 = 1 \text{ od. } 3 \rightarrow \cos((2k + 1)\cdot \frac{\pi}{2}) = 1 ; k\in \mathbb{N} $}
+                    \item{$n\mod 4 = 2 \rightarrow \cos((4k + 2)\cdot \frac{\pi}{2}) = -1 ; k\in \mathbb{N} $}
+                \end{itemize}
+                $\Rightarrow$ \textbf{KEINE} Monotonie vorhanden\\
+                $\Rightarrow$ Folge konvergiert nicht und es gibt keinen Grenzwert.
+            }
+        \end{enumerate}
+        \item[Aufgabe 2]
+    \end{enumerate}
+
+
+\end{document}
