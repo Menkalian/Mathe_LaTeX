@@ -1,3 +1,4 @@
+%! Suppress = LineBreak
 \documentclass{scrreprt}
 
 % Spracheinstellungen
@@ -21,33 +22,275 @@
 
     \section*{Lösung Übung 1}
     \begin{enumerate}
-        \item[Aufgabe 1]
-        \begin{enumerate}
-            \item[a)]{
-                $\langle a_n \rangle = \langle \frac{10^6}{n}\rangle$\newline
-                $\lim \limits_{n \to \infty} a_n = \lim \limits_{n \to \infty} \frac{10^6}{n} = \lim \limits_{n \to \infty} (10^6 \cdot \frac{1}{n} ) = 10^6 \cdot \lim \limits_{n \to \infty} (\frac{1}{n}) = 10^6 \cdot 0 = \underline{0}$
-            }
-            \item[d)]{
-                $\langle a_n \rangle = \langle\cos(n\cdot\frac{\pi}{2})\rangle$\newline
-                Konvergiert die Folge?\newline
-                $\Rightarrow$ Nutzung Theorem: Eine Folge konvergiert genau dann, wenn sie beschränkt und monoton ist.\newline
+        \item[Aufgabe 1] {
+            \begin{enumerate}
+                \item[a)]{
+                    $\langle a_n \rangle = \langle \frac{10^6}{n}\rangle$\newline
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{10^6}{n} =
+                    \lim \limits_{n \to \infty} (10^6 \cdot \frac{1}{n} ) =
+                    10^6 \cdot \lim \limits_{n \to \infty} (\frac{1}{n}) =
+                    10^6 \cdot 0 = \underline{0}$
+                }
+                \item[b)]{
+                    $\langle a_n \rangle = \langle \frac{\sqrt{n}}{n}\rangle$\newline
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{\sqrt{n}}{n} =
+                    \lim \limits_{n \to \infty} \frac{1}{\sqrt{n}} =
+                    \underline{0}$\\
+                    da $\sqrt(n)$ über alle Grenzen wächst.
+                }
+                \item[c)]{
+                    $\langle a_n \rangle =\langle (-\frac{3}{5})^n + 1\rangle$\newline
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} [(-\frac{3}{5})^n + 1] =
+                    \lim \limits_{n \to \infty} (-\frac{3}{5})^n + \lim \limits_{n \to \infty} 1 =
+                    0 + 1 = \underline{1}$
+                }
+                \item[d)]{
+                    $\langle a_n \rangle = \langle\cos(n\cdot\frac{\pi}{2})\rangle$\newline
+                    Konvergiert die Folge?\newline
+                    $\Rightarrow$ Nutzung Theorem: Eine Folge konvergiert genau dann, wenn sie beschränkt und monoton ist.\newline
 
-                Prüfung der Schranken (trivial für unmodulierten Cosinus):\newline
-                \textbullet $\sup a_n = 1$\newline
-                \textbullet $\inf a_n = -1$\newline
+                    Prüfung der Schranken (trivial für unmodulierten Cosinus):\newline
+                    \textbullet $\sup a_n = 1$\newline
+                    \textbullet $\inf a_n = -1$\newline
 
-                Prüfung der Monotonie:\newline
-                Fälle der Werte in der Folge:
-                \begin{itemize}
-                    \item{$n\mod 4 = 0 \rightarrow \cos(4k\cdot \frac{\pi}{2}) = 1 ; k\in \mathbb{N} $}
-                    \item{$n\mod 4 = 1 \text{ od. } 3 \rightarrow \cos((2k + 1)\cdot \frac{\pi}{2}) = 1 ; k\in \mathbb{N} $}
-                    \item{$n\mod 4 = 2 \rightarrow \cos((4k + 2)\cdot \frac{\pi}{2}) = -1 ; k\in \mathbb{N} $}
-                \end{itemize}
-                $\Rightarrow$ \textbf{KEINE} Monotonie vorhanden\\
-                $\Rightarrow$ Folge konvergiert nicht und es gibt keinen Grenzwert.
-            }
-        \end{enumerate}
-        \item[Aufgabe 2]
+                    Prüfung der Monotonie:\newline
+                    Fälle der Werte in der Folge:
+                    \begin{itemize}
+                        \item{$n\mod 4 = 0 \rightarrow \cos(4k\cdot \frac{\pi}{2}) = 1 ; k\in \mathbb{N} $}
+                        \item{$n\mod 4 = 1 \text{ od. } 3 \rightarrow \cos((2k + 1)\cdot \frac{\pi}{2}) = 1 ; k\in \mathbb{N} $}
+                        \item{$n\mod 4 = 2 \rightarrow \cos((4k + 2)\cdot \frac{\pi}{2}) = -1 ; k\in \mathbb{N} $}
+                    \end{itemize}
+                    $\Rightarrow$ \textbf{KEINE} Monotonie vorhanden\\
+                    $\Rightarrow$ Folge konvergiert nicht und es gibt keinen Grenzwert.
+                }
+            \end{enumerate}
+        }
+        \newpage
+        \item[Aufgabe 2] {
+            \begin{enumerate}
+                \item[a)]{
+                    $\langle a_n\rangle = \langle \frac{2\cdot n^2 - n + 1}{n^2 +1}\rangle$\\
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{2\cdot n^2 - n + 1}{n^2 +1} =
+                    \lim \limits_{n \to \infty} \frac{2 - \frac{1}{n} + \frac{1}{n^2}}{1+ \frac{1}{n^2}} =
+                    \frac{2}{1} = \underline{2}$
+                }
+                \item[b)]{
+                    $\langle a_n\rangle = \langle \frac{n-1}{n\cdot\sqrt{n}}\rangle$\\
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{n-1}{n\cdot\sqrt{n}} =
+                    \lim \limits_{n \to \infty} \frac{\frac{1}{\sqrt{n}} - \frac{1}{n\cdot\sqrt{n}}}{1} =
+                    \underline{0}$\\
+                    da alle Brüche im Zähler den Grenzwert 0 haben (Permanenzeigenschaften bzgl. Potenzen und Wurzeln -> Zurückführbar auf $\frac{1}{n}$)
+                }
+            \end{enumerate}
+        }
+        \newpage
+        \item[Aufgabe 3]{
+            $\langle a_n\rangle = \langle \frac{(n-1)^2}{2\cdot n^2 + 1}\rangle$\\
+            $\langle b_n\rangle = \langle \frac{1-n}{3\cdot n + 1}\rangle$\\
+            $\lim \limits_{n \to \infty} a_n =
+            \lim \limits_{n \to \infty} \frac{(n-1)^2}{2\cdot n^2 + 1} =
+            \lim \limits_{n \to \infty} \frac{n^2-2n+1}{2\cdot n^2 + 1} =
+            \lim \limits_{n \to \infty} \frac{1-\frac{2}{n}+\frac{1}{n^2}}{2 + \frac{1}{n^2}} =
+            \underline{\frac{1}{2}}$\\
+            $\lim \limits_{n \to \infty} b_n =
+            \lim \limits_{n \to \infty} \frac{1-n}{3\cdot n + 1} =
+            \lim \limits_{n \to \infty} \frac{-1+ \frac{1}{n}}{3 + \frac{1}{n}} =
+            \underline{-\frac{1}{3}}$
+
+            \begin{enumerate}
+                \item [a)]{
+                    $c_n = a_n + b_n$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} a_n + \lim \limits_{n \to \infty} b_n =
+                    \frac{1}{2}+(-\frac{1}{3})= \underline{\frac{1}{6}}$
+                }
+                \item [b)]{
+                    $c_n = a_n - b_n$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} a_n - \lim \limits_{n \to \infty} b_n =
+                    \frac{1}{2}-(-\frac{1}{3})= \underline{\frac{5}{6}}$
+                }
+                \item [c)]{
+                    $c_n = a_n \cdot b_n$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} a_n \cdot \lim \limits_{n \to \infty} b_n =
+                    \frac{1}{2}\cdot(-\frac{1}{3})= \underline{-\frac{1}{6}}$
+                }
+                \item [d)]{
+                    $c_n = \frac{a_n}{b_n}$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \frac{\lim \limits_{n \to \infty} a_n} {\lim \limits_{n \to \infty} b_n} =
+                    \frac {\frac{1}{2}}{-\frac{1}{3}}= \underline{-\frac{3}{2}}$\\
+                    gültig für $n\geq 2$.
+                }
+                \item [e)]{
+                    $c_n = \left\| b_n \right\|$\\\\
+                    $\lim \limits_{n \to \infty} c_n =\\
+                    \lim \limits_{n \to \infty} \left\| b_n \right\| =
+                    \left\| \lim \limits_{n \to \infty} b_n \right\| =\\
+                    \underline{\frac{1}{3}}$\\
+                }
+                \item [f)]{
+                    $c_n = \sqrt{8\cdot a_n}$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} \left( \sqrt{8} \cdot \sqrt{a_n}\right) =\\
+                    2\sqrt{2} \cdot \lim \limits_{n \to \infty} \sqrt{a_n} =
+                    2\sqrt{2} \cdot \sqrt{ \lim \limits_{n \to \infty} a_n } =\\
+                    2\sqrt{2} \cdot \sqrt{\frac{1}{2}} =
+                    2\sqrt{2} \cdot \frac{1}{\sqrt{2}} =
+                    \underline{2}$\\
+                }
+            \end{enumerate}
+        }\newpage
+        \item[Aufgabe 4]{
+            \begin{enumerate}
+                \item [a)]{
+                    $\langle a_n \rangle = \langle \frac{n^2 + 10}{n+1} \rangle$\\
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{n^2 + 10}{n+1}$\\
+                    reziproke Folge: $\left\| \frac{n+1}{n^2 +10} \right\|$\\
+                    $\lim \limits_{n \to \infty} \left\| \frac{n+1}{n^2 +10} \right\| =
+                    \left\| \lim \limits_{n \to \infty} \frac{n+1}{n^2 +10} \right\| =
+                    \left\| \lim \limits_{n \to \infty} \frac{\frac{1}{n}+\frac{1}{n^2}}{1 + \frac{10}{n^2}} \right\| =
+                    \left\| 0 \right\| =
+                    \underline{0}$\\
+                    $\rightarrow$ reziproke Folge ist Nullfolge $\rightarrow$ $a_n$ wächst über jede Grenze.
+                }
+                \item[b)]{
+                    $\langle a_n \rangle = \langle \frac{b_q \cdot n^q + b_{q-1} \cdot n^{q-1} + \dots + b_0} {c_p \cdot n^p + c_{p-1} \cdot n^{p-1} + \dots + c_0} \rangle$\\
+                    ($a_n$ stellt einen allgemeinen Bruch aus zwei Polynomen dar.)\\\\
+                    Fallunterscheidung:
+                    \begin{enumerate}
+                        \item [1.Fall:] q<p: Nullfolge\\ s. Handschriftliche Bearbeitung %TODO: Nicht 4B einschicken.
+                        \item [2.Fall:] q=p: $\frac{b_q}{c_p}$\\
+                        $\lim \limits_{n \to \infty} a_n =
+                        \lim \limits_{n \to \infty} \frac{b_q \cdot n^q + b_{q-1} \cdot n^{q-1} + \dots + b_0} {c_p \cdot n^p + c_{p-1} \cdot n^{p-1} + \dots + c_0} =
+                        \lim \limits_{n \to \infty} \frac{b_q \cdot n^0 + b_{q-1} \cdot n^{-1} + \dots + b_0 \cdot n^{-q}} {c_q \cdot n^0 + c_{q-1} \cdot n^{-1} + \dots + c_0\cdot n^{-q}} =
+                        \underline{\frac{b_q}{c_p}}$
+
+                        \item [3.Fall:] q>p: Wächst über jede Grenze (Beweis siehe Fall 1 für reziproke Folge)
+                    \end{enumerate}
+                }
+            \end{enumerate}
+        }
+    \end{enumerate}
+
+    % Beginn einer neuen Übung
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+    \section*{Lösung Übung 1 - Abgabe}
+    \begin{enumerate}
+        \item[Aufgabe 1] {
+            \begin{enumerate}
+                \item[a)]{
+                    $\langle a_n \rangle = \langle \frac{10^6}{n}\rangle$\newline
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{10^6}{n} =
+                    \lim \limits_{n \to \infty} (10^6 \cdot \frac{1}{n} ) =
+                    10^6 \cdot \lim \limits_{n \to \infty} (\frac{1}{n}) =
+                    10^6 \cdot 0 = \underline{0}$
+                }
+                \item[c)]{
+                    $\langle a_n \rangle =\langle (-\frac{3}{5})^n + 1\rangle$\newline
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} [(-\frac{3}{5})^n + 1] =
+                    \lim \limits_{n \to \infty} (-\frac{3}{5})^n + \lim \limits_{n \to \infty} 1 =
+                    0 + 1 = \underline{1}$
+                }
+            \end{enumerate}
+        }
+        \item[Aufgabe 2] {
+            \begin{enumerate}
+                \item[a)]{
+                    $\langle a_n\rangle = \langle \frac{2\cdot n^2 - n + 1}{n^2 +1}\rangle$\\
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{2\cdot n^2 - n + 1}{n^2 +1} =
+                    \lim \limits_{n \to \infty} \frac{2 - \frac{1}{n} + \frac{1}{n^2}}{1+ \frac{1}{n^2}} =
+                    \frac{2}{1} = \underline{2}$
+                }
+            \end{enumerate}
+        }
+        \item[Aufgabe 3]{
+            $\langle a_n\rangle = \langle \frac{(n-1)^2}{2\cdot n^2 + 1}\rangle$\\
+            $\langle b_n\rangle = \langle \frac{1-n}{3\cdot n + 1}\rangle$\\
+            $\lim \limits_{n \to \infty} a_n =
+            \lim \limits_{n \to \infty} \frac{(n-1)^2}{2\cdot n^2 + 1} =
+            \lim \limits_{n \to \infty} \frac{n^2-2n+1}{2\cdot n^2 + 1} =
+            \lim \limits_{n \to \infty} \frac{1-\frac{2}{n}+\frac{1}{n^2}}{2 + \frac{1}{n^2}} =
+            \underline{\frac{1}{2}}$\\
+            $\lim \limits_{n \to \infty} b_n =
+            \lim \limits_{n \to \infty} \frac{1-n}{3\cdot n + 1} =
+            \lim \limits_{n \to \infty} \frac{-1+ \frac{1}{n}}{3 + \frac{1}{n}} =
+            \underline{-\frac{1}{3}}$
+
+            \begin{enumerate}
+                \item [a)]{
+                    $c_n = a_n + b_n$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} a_n + \lim \limits_{n \to \infty} b_n =
+                    \frac{1}{2}+(-\frac{1}{3})= \underline{\frac{1}{6}}$
+                }
+                \item [b)]{
+                    $c_n = a_n - b_n$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} a_n - \lim \limits_{n \to \infty} b_n =
+                    \frac{1}{2}-(-\frac{1}{3})= \underline{\frac{5}{6}}$
+                }
+                \item [c)]{
+                    $c_n = a_n \cdot b_n$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} a_n \cdot \lim \limits_{n \to \infty} b_n =
+                    \frac{1}{2}\cdot(-\frac{1}{3})= \underline{-\frac{1}{6}}$
+                }
+                \item [d)]{
+                    $c_n = \frac{a_n}{b_n}$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \frac{\lim \limits_{n \to \infty} a_n} {\lim \limits_{n \to \infty} b_n} =
+                    \frac {\frac{1}{2}}{-\frac{1}{3}}= \underline{-\frac{3}{2}}$\\
+                    gültig für $n\geq 2$.
+                }
+                \item [e)]{
+                    $c_n = \left\| b_n \right\|$\\\\
+                    $\lim \limits_{n \to \infty} c_n =\\
+                    \lim \limits_{n \to \infty} \left\| b_n \right\| =
+                    \left\| \lim \limits_{n \to \infty} b_n \right\| =\\
+                    \underline{\frac{1}{3}}$\\
+                }
+                \item [f)]{
+                    $c_n = \sqrt{8\cdot a_n}$\\\\
+                    $\lim \limits_{n \to \infty} c_n =
+                    \lim \limits_{n \to \infty} \left( \sqrt{8} \cdot \sqrt{a_n}\right) =\\
+                    2\sqrt{2} \cdot \lim \limits_{n \to \infty} \sqrt{a_n} =
+                    2\sqrt{2} \cdot \sqrt{ \lim \limits_{n \to \infty} a_n } =\\
+                    2\sqrt{2} \cdot \sqrt{\frac{1}{2}} =
+                    2\sqrt{2} \cdot \frac{1}{\sqrt{2}} =
+                    \underline{2}$\\
+                }
+            \end{enumerate}
+        }
+        \item[Aufgabe 4]{
+            \begin{enumerate}
+                \item [a)]{
+                    $\langle a_n \rangle = \langle \frac{n^2 + 10}{n+1} \rangle$\\
+                    $\lim \limits_{n \to \infty} a_n =
+                    \lim \limits_{n \to \infty} \frac{n^2 + 10}{n+1}$\\
+                    reziproke Folge: $\left\| \frac{n+1}{n^2 +10} \right\|$\\
+                    $\lim \limits_{n \to \infty} \left\| \frac{n+1}{n^2 +10} \right\| =
+                    \left\| \lim \limits_{n \to \infty} \frac{n+1}{n^2 +10} \right\| =
+                    \left\| \lim \limits_{n \to \infty} \frac{\frac{1}{n}+\frac{1}{n^2}}{1 + \frac{10}{n^2}} \right\| =
+                    \left\| 0 \right\| =
+                    \underline{0}$\\
+                    $\rightarrow$ reziproke Folge ist Nullfolge $\rightarrow$ $a_n$ wächst über jede Grenze.
+                }
+            \end{enumerate}
+        }
     \end{enumerate}
 
 
