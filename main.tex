@@ -8,6 +8,8 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 
+\DeclareUnicodeCharacter{2718}{\cross}
+
 \title{Mathe\_Übungen\_Abgabe} % Wir können ja auch immer nur die Lösung exportieren.
 \author{Inf19 Gruppe B4}
 
@@ -293,5 +295,106 @@
         }
     \end{enumerate}
 
+    % Beginn einer neuen Übung
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+    \section*{Lösung Übung 2 - Abgabe}
+    \begin{enumerate}
+        \item[Aufgabe 7]{\\
+            \begin{enumerate}
+                \item[b)]{
+                    $\sum\limits_{n=1}^\infty a_n$ mit $a_n = \frac{1}{\sqrt[n]{n}}$\\
+                    Ist a_n eine Nullfolge? Dann müsste die reziproke Folge $rez_n = \sqrt[n]{n}$ über jede Grenze wachsen.\\
+                    Es gilt auf jeden Fall $rez_n \geq 0$ aufgrund der Definition von Wurzeln. Also muss $rez_n$ wachsen (bis auf endlich viele Ausnahmen).\\
+                    $\Rightarrow$ Prüfung auf Monotonie\\
+                    $\sqrt[n+1]{n+1} \geq \sqrt[n]{n}$\\
+                    $\(\sqrt[n+1]{n+1}\)^\(n+1\) \geq \(\sqrt[n]{n}\)^\(n+1\)$\\
+                    $n+1 \geq n \cdot \sqrt[n]{n}$\\
+                    $\frac{1}{n} \geq \sqrt[n]{n}$\\
+                    Das ist im Unendlichen betrachtet ein Widerspruch. $\sqrt[n]{n}$ müsste kleiner sein als $\frac{1}{n}$, was jedoch eine Nullfolge ist. Somit
+                    müsste $rez_n$ kleiner als eine Nullfolge sein um über alle Grenzen zu wachsen. Dies ist ein eindeutiger Widerspruch.\\
+                    (Sorry für den seltsamen Beweis, aber das war der erste der nach 5 oder 6 Ansätzen \glqq funkioniert\grqq hat.)\\
+                    $\rightarrow \frac{1}{\sqrt[n]{n}}$ ist keine Nullfolge $\rightarrow$ Die Reihe muss divergieren!
+                }
+            \end{enumerate}
+        }
+        \item[Aufgabe 8]{\\
+            \begin{enumerate}
+                \item[b)]{
+                    $a_n=\frac{2^{n-1}}{n!}$ ; $s=\sum\limits_{n=1}^\infty a_n$\\
+                    $\lim \limits_{n \to \infty} \frac{\|a_{n+1}\|}{\|a_n\|} = $\\
+                    $\lim \limits_{n \to \infty} \frac{2 ^ n}{(n+1)!} \cdot \frac{n!}{2 ^ {n-1}} = $\\
+                    $\lim \limits_{n \to \infty} \frac{2}{n+1} = $
+                    $0$\\
+                    $0 < 1 \rightarrow$ Quotientenkriterium erfüllt $\rightarrow$ Reihe konvergiert.
+                }
+                \item[c)]{
+                    $a_k=\frac{2\cdot k^2}{(k+1)\cdot 3 ^k}$ ; $s=\sum\limits_{k=1}^\infty a_k$\\
+                    $\lim \limits_{n \to \infty} \frac{\|a_{k+1}\|}{\|a_k\|} = $\\
+                    $\lim \limits_{n \to \infty} \frac{2\cdot k^3}{(k+2)\cdot 3 ^{k+1}} \cdot \frac{(k+1)\cdot 3 ^k}{2\cdot k^2} = $\\
+                    $\lim \limits_{n \to \infty} \frac{(k+1)\cdot (k^2+2k+1)}{(k+2)\cdot 3 \cdot k^2} = $\\
+                    $\lim \limits_{n \to \infty} \frac{k^3+3k^2+3k+1}{3k^3+6k^2} = $
+                    $\frac{1}{3}$\\
+                    $\frac{1}{3} < 1 \rightarrow$ Quotientenkriterium erfüllt $\rightarrow$ Reihe konvergiert.
+                }
+            \end{enumerate}
+        }
+        \item[Aufgabe 9]{\\
+            $\sum\limits_{k=1}^\infty \frac{\sin(2^k)}{3^k}$\\
+            Untersuchung mit dem Leibniz-Kriterium:\\
+            \begin{enumerate}
+                \item[1.]{
+                    alternierender Teil? $\rightarrow \sin(2^k)$ alterniert zwischen -1 und 1. \checkmark
+                }
+                \item[2.]{
+                    monoton fallend?\\ $\frac{1}{3^k} \geq \frac{1}{3^{k+1}}$\\$1\geq\frac{1}{3}$ \checkmark
+                }
+                \item[3.]{
+                    Nullfolge? $\rightarrow \frac{1}{3^k} = (\frac{1}{3})^k$ ist Nullfolge.  \checkmark
+                }
+            \end{enumerate}
+            Konvergiert anhand des Leibniz-Kriteriums.
+        }
+        \item[Aufgabe 10]{\\
+            \begin{enumerate}
+                \item[a)]{
+                    $\sum\limits_{n=1}^\infty (-1)^{n+1} \cdot (1+(\frac{1}{10})^n)$\\
+                    Untersuchung mit dem Leibniz-Kriterium:\\
+                    \begin{enumerate}
+                        \item[1.]{
+                            alternierender Teil? $\rightarrow (-1)^{n+1}$ alterniert. \checkmark
+                        }
+                        \item[2.]{
+                            monoton fallend?\\ $(1+(\frac{1}{10})^n) \geq (1+(\frac{1}{10})^{n+1})$\\$1\geq\frac{1}{10}$ \checkmark
+                        }
+                        \item[3.]{
+                            Nullfolge? Nein! Die Folge hat den Grenzwert 1! $\times$
+                        }
+                    \end{enumerate}
+                    Konvergiert nicht anhand des Leibniz-Kriteriums.
+
+                }
+                \item[b)]{
+                    $s=\sum\limits_{n=1}^\infty  \cdot\frac{1}{\sqrt{n}}$\\
+                    Untersuchung mit dem Leibniz-Kriterium:\\
+                    \begin{enumerate}
+                        \item[1.]{
+                            alternierender Teil? $\rightarrow (-1)^{n+1}$ alterniert. \checkmark
+                        }
+                        \item[2.]{
+                            monoton fallend?\\ $\frac{1}{\sqrt{n}} \geq \frac{1}{\sqrt{n+1}}$ \\ $\sqrt{n+1}\geq\sqrt{n}$\\ $n+1 \geq n$ \\ $1\geq0$ \checkmark
+                        }
+                        \item[3.]{
+                            Nullfolge? Ja! Majorisiert durch $\frac{1}{n}$  \checkmark
+                        }
+                    \end{enumerate}
+                    Konvergiert anhand des Leibniz-Kriteriums.
+                }
+            \end{enumerate}
+        }
+
+    \end{enumerate}
 
 \end{document}
